@@ -1,0 +1,159 @@
+//CART => we use the cart to add something to our order, you will not pay when you send the data of the cart
+{
+    "cartCheckout": 0,
+    "plates": [
+        {
+            "plateId": "string",
+            "plateName": "string",
+            "extras": [
+                {
+                    "extraId": "string",
+                    "extraName": "string",
+                    "extraPrice": 0,
+                    "extraQuantity": 0
+                }
+            ],
+            "platePrice": 0,
+            "plateQuantity": 0
+        }
+    ],
+    "drinks": [
+        {
+            "drinkId": "string",
+            "drinkName": "string",
+            "drinkPrice": 0,
+            "drinkQuantity": 0
+        }
+    ],
+    "extras": [
+        {
+            "extraId": "string",
+            "extraName": "string",
+            "extraPrice": 0,
+            "extraQuantity": 0
+        }
+    ]
+}
+
+//ORDER => your actual order, that includes also the plates that you ordered before. Before the order can be closed you have to pay
+{
+    "tableId": "string",
+    "tableCheckout": 0,
+    "clients": [
+        {
+            "clientId": "string",
+            "clientCheckout": 0,
+            "plates": [
+                {
+                    "plateId": "string",
+                    "plateName": "string",
+                    "extras": [
+                        {
+                            "extraId": "string",
+                            "extraName": "string",
+                            "extraPrice": 0,
+                            "extraQuantity": 0
+                        }
+                    ],
+                    "platePrice": 0,
+                    "plateQuantity": 0
+                }
+            ],
+            "drinks": [
+                {
+                    "drinkId": "string",
+                    "drinkName": "string",
+                    "drinkQuantity": 0
+                }
+            ],
+            "extras": [
+                {
+                    "extraId": "string",
+                    "extraName": "string",
+                    "extraPrice": 0,
+                    "extraQuantity": 0
+                }
+            ]
+        }
+    ]
+}
+
+//RESTAURANTS => restaurants that you will find in your home, those restaurants should come related to your position
+{
+    [
+        {
+            "image": "string",
+            "name": "string",
+            "cusines": ["string"],
+            "location": "string",
+            "rating": 0,
+            "cheapestPlate": 0
+        }
+    ]
+}
+
+//RESTAURANT => the data that we need when we scan a qr code or when we click on a restaurant card in the home
+{
+    "restaurantName": "string",
+    "restaurantId": "string",
+    "rating": 0,
+    "reviews": {
+        "reviewsNo": 0,
+        "food": 0,
+        "service": 0,
+        "ambience": 0,
+        "value": 0
+    },
+    "cheapestPlate": 0,
+    "restaurantDescription": "string",
+    "restaurantCusines": ["string"],
+    "diningStyles": ["string"],
+    "paymentOptions": ["string"],
+    "entertainment": ["string"],
+    "restaurantMenu": {
+        "menuTypes": [
+            {
+                "menuName": "string",
+                "menuId": "string",
+                "menuSections": [
+                    {
+                        "sectionName": "string",
+                        "sectionId": "string",
+                        "plates": [
+                            {
+                                "plateName": "string",
+                                "plateId": "string",
+                                "plateIngredients": [
+                                    {
+                                        "ingredientName": "string",
+                                        "ingredientPrice": 0
+                                    }
+                                ],
+                                "platePrice": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "specialOffers": [
+        [
+            {
+                "plateName": "string",
+                "plateId": "string",
+                "plateIngredients": [
+                    {
+                        "ingredientName": "string",
+                        "ingredientPrice": 0
+                    }
+                ],
+                "platePrice": 0,
+                "offer": "string"
+            }
+        ]
+    ],
+    "photos": ["string"],
+    "location": "Timisoara",
+    "coverPicture": "string"
+}
